@@ -33,6 +33,15 @@
     <ClInclude Include="Resource.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="ClientPC.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="NetWallTalk.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="HelpDialog.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Limitless Remote PC_ver1.1.cpp">
@@ -42,6 +51,15 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientPC.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="NetWallTalk.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="HelpDialog.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -57,6 +75,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\Limitless Remote PC_ver1.1.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\icon.ico">
       <Filter>리소스 파일</Filter>
     </Image>
   </ItemGroup>

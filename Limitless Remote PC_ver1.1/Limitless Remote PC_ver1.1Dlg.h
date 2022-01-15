@@ -3,6 +3,8 @@
 //
 
 #pragma once
+#include "afxcmn.h"
+#include "afxwin.h"
 
 
 // CLimitlessRemotePC_ver11Dlg 대화 상자
@@ -19,7 +21,12 @@ public:
 
 	protected:
 	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV 지원입니다.
-
+	void ClickPrevious();
+	void ClickNext();
+	void Send_hold_connection();
+	void ChangeUI(bool bIsConnected);
+	void OnTrayMenuDialogOpen();
+	void OnTrayMenuExit();
 
 // 구현입니다.
 protected:
@@ -30,4 +37,25 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
+public:
+	CIPAddressCtrl m_ctrlIp;
+	afx_msg void OnBnClickedButtonConnect();
+	afx_msg void OnBnClickedButtonVolUp();
+	afx_msg void OnBnClickedButtonVolDn();
+	afx_msg void OnBnClickedButtonLeft();
+	afx_msg void OnBnClickedButtonRight();
+	afx_msg void OnBnClickedButtonUp();
+	afx_msg void OnBnClickedButtonDown();
+	afx_msg void OnBnClickedButtonPower();
+	int m_nRadio_Mode;
+	virtual BOOL PreTranslateMessage(MSG* pMsg);
+	afx_msg void OnTimer(UINT_PTR nIDEvent);
+	bool bOnlyOneFlag;
+	int nTimerCount;
+	virtual BOOL DestroyWindow();
+	afx_msg void OnBnClickedButtonTrayAdd();
+	afx_msg LRESULT CLimitlessRemotePC_ver11Dlg::OnTaryNotifyAction(WPARAM wParam, LPARAM lParam);
+	afx_msg LRESULT CLimitlessRemotePC_ver11Dlg::WindowProc(UINT message, WPARAM wParam, LPARAM lParam);
+
+	afx_msg void OnBnClickedButtonInfo();
 };
